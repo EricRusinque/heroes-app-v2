@@ -1,0 +1,154 @@
+
+.hero-details {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    // reduce opacity of non-hovered bit
+    &:hover {
+      .cute-bit {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+}
+  .hero-screen {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    animation: slide-right 2.1s both;
+    img {
+        display: block;
+        width: 32em;
+        margin: 20px auto;
+        opacity: 0.4;
+        box-shadow: 0 19px 38px rgba(#000, 0.3), 0 15px 12px rgba(#000, 0.2);box-shadow: 0 19px 38px rgb(255 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 20%);
+        border-radius: 3px;
+    }
+    
+    .cute-bit {
+      position: absolute;
+      min-width: 15em;
+      transition: all 0.25s ease-out;
+      &:hover {
+        // !important here allows custom base value with consistent hover
+        min-width: 21em !important;
+      }
+      
+      // REFACTOR OPPORTUNITY:
+      // pad both sides, then
+      // add matching before/after & hide as needed
+      &.grow-right {
+          text-align: right;
+          h2 {
+              padding-left: 1em;
+              &:after {
+                  left: 0;
+                  transform: translate(-50%, 50%);
+                }
+            }
+     
+      }
+        &.grow-left {
+            text-align: left;
+            h2 {
+                padding-right: 1em;
+                &:after {
+                    right: 0;
+                    transform: translate(50%, 50%);
+                }
+              }
+            }
+      
+      h2 {
+        position: relative;
+        padding: 0 0 0.4em;
+        border-bottom: solid 0.2em;
+        margin: 0 0 0.4em;
+        text-shadow: 0 0 1em 1em rgba(0,0,0,0.1);
+        &:after {
+          position: absolute;
+          bottom: -0.1em;
+          content: "";
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          background: #fff;
+        }
+      } // h2
+      p {
+        margin: 0;
+        padding: 0;
+        text-shadow: 0 0 1em 1em rgba(0,0,0,0.1);
+      }
+      &.publisher-hero-screen {
+        right: 62%;
+        top: 5%;
+        // custom value only applies to non-hover
+        min-width: 12em;
+      }
+      &.superhero-hero-screen{  
+        left: 62%;
+        top: 20%;
+      }
+      &.alter-ego-hero-screen {
+        right:  62%;
+        top: 40%;
+        // custom value only applies to non-hover
+        min-width: 16em;
+      }
+      &.character-hero-screen {
+        left: 62%;
+        top: 60%;
+      }
+      &.first-appearance {
+        right: 62%;
+        top: 80%;
+      }
+    } // .cute-bit
+    
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-800px);
+    }
+
+    100% {
+      transform: translateX(0px);;
+    }
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .button-return-screen {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: #111111;
+    position: relative;
+    border: 2px solid #ffffff;
+    outline: 1px solid;
+    outline-color: rgba(255, 0, 0, 0.5);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+      box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0,  0.4);
+      outline-color: rgba(49, 138, 172, 0);
+      outline-offset: 80px;
+      text-shadow: 1px 1px 6px #fff;
+    }
+  }
+    
+  
+
+  

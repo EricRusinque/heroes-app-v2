@@ -1,0 +1,111 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Comic Neue', cursive;
+    background-color: #151618;
+}
+
+.box {
+    width: 710px;
+    height: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-image: url('https://www.teahub.io/photos/full/321-3213730_marvel-and-dc-unite.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: 10px 10px 24px 9px rgba(0,0,0,0.82);
+    .form-opacity {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+    }
+    h1 {
+        padding: 50px;
+        font-size: 50px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    input[type="text"]  {
+       border: 0;
+       background: none;
+       display: block;
+       margin: 40px auto;
+       text-align: center;
+       padding: 14px 10px;
+       width: 200px;
+       border: 2px solid white;
+       outline:  2px solid rgba(255, 0, 0, 0.5) ;
+       color: white;
+       border-radius: 2px;
+       transition: 0.25s;
+       font-size: 20px;
+        &:focus{
+            box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0,  0.4);
+            outline-color: rgba(49, 138, 172, 0);
+            outline-offset: 80px;
+            text-shadow: 1px 1px 6px #fff;
+            width: 280px;
+       }
+        &:hover{
+            box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0,  0.4);
+            outline-color: rgba(49, 138, 172, 0);
+            outline-offset: 80px;
+            text-shadow: 1px 1px 6px #fff;
+        }
+    }
+    input[type = "password"]{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 40px auto;
+        text-align: center;
+        border:  2px solid white;
+        padding: 14px 10px;
+        width: 200px;
+        outline: 2px solid rgba(65, 56, 146, 0.5);
+        color: white;
+        border-radius: 2px;
+        transition: 0.25s;
+        font-size: 20px;
+        &:focus{
+          box-shadow: inset 0 0 20px rgba(42, 28, 161, 0.5), 0 0 20px rgba(0, 0, 0,  0.4);
+          outline-color: rgba(49, 138, 172, 0);
+          outline-offset: 80px;
+          text-shadow: 1px 1px 6px #fff;
+          width: 280px;
+        }
+        &:hover{
+            box-shadow: inset 0 0 20px rgba(42, 28, 161, 0.5), 0 0 20px rgba(0, 0, 0,  0.4);
+          outline-color: rgba(49, 138, 172, 0);
+          outline-offset: 80px;
+          text-shadow: 1px 1px 6px #fff;
+            // width: 280px;
+        }
+     }
+
+    button {
+        color: #fff !important;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0.5em 1.2em;
+        background: #111111;
+        position: relative;
+        border: 2px solid #ffffff;
+        outline: 1px solid;
+        outline-color: rgba(255, 0, 0, 0.5);
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    
+        &:hover {
+          box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0,  0.4);
+          outline-color: rgba(49, 138, 172, 0);
+          outline-offset: 80px;
+          text-shadow: 1px 1px 6px #fff;
+        }
+    } 
+
+}
